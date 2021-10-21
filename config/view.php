@@ -15,6 +15,8 @@ return [
 
     'paths' => [
         resource_path('views'),
+        __DIR__.'/../views',
+        __DIR__.'/../AdminLTE'
     ],
 
     /*
