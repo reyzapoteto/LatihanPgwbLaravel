@@ -9,7 +9,9 @@
 
 @include('AdminLTE.Navbar')
 
+
 @yield('content')
+
 
 @include('AdminLTE.Fotter')
 </body>

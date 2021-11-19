@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProdukController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,13 @@ Route::get('/', function () {
 Route::get("/master", function () {
     return view('.AdminLTE/TemplateMaster');
 });
+
+
+Route::get("/product/add", function () {
+    return view('.balajar_database/tambah_produk');
+})->name('createProduct');
+
+
+Route::get("/product", [ProdukController::class, 'index']);
+
+Route::get("/product/delete/{id}", [ProdukController::class, 'destroy'])->name('deleteProduct');
